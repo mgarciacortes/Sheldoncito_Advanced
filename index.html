@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sheldoncito</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Fuente más llamativa para el título -->
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="app-container">
+
+        <header class="app-header">
+            <img src="assets/rayo_bw.svg" alt="logo" class="logo">
+            <h1 class="title">Sheldoncito</h1>
+        </header>
+
+        <div class="menu-bar">
+            <button onclick="openSection('chat')">💬 Chat</button>
+            <button onclick="openSection('temas')">📘 Temas</button>
+            <button onclick="openSection('lecciones')">🧪 Lecciones</button>
+            <button onclick="openSection('guardar')">💾 Guardar</button>
+            <button onclick="openSection('cargar')">📂 Cargar</button>
+        </div>
+
+        <!-- Sección CHAT -->
+        <section id="chat" class="section visible">
+            <div id="chatWindow" class="chat-window"></div>
+
+            <div class="input-area">
+                <input id="userInput" type="text" placeholder="Escribe tu pregunta de física..." />
+                <button onclick="sendMessage()">Enviar</button>
+            </div>
+        </section>
+
+        <!-- Sección TEMAS -->
+        <section id="temas" class="section">
+            <h2>Temas disponibles</h2>
+            <ul class="tema-list">
+                <li onclick="askTopic('cinemática')">⚡ Cinemática</li>
+                <li onclick="askTopic('dinámica')">⚙️ Dinámica</li>
+                <li onclick="askTopic('energía')">🔋 Energía</li>
+                <li onclick="askTopic('electricidad')">💡 Electricidad</li>
+                <li onclick="askTopic('ondas')">🌊 Ondas</li>
+                <li onclick="askTopic('fuerzas')">🧲 Fuerzas</li>
+            </ul>
+        </section>
+
+        <!-- Sección LECCIONES -->
+        <section id="lecciones" class="section">
+            <h2>Tutor de Física</h2>
+            <p>Selecciona una lección:</p>
+            <ul class="leccion-list">
+                <li onclick="showLesson('mru')">📗 MRU</li>
+                <li onclick="showLesson('mrua')">📘 MRUA</li>
+                <li onclick="showLesson('newton')">📙 Leyes de Newton</li>
+                <li onclick="showLesson('energia')">📕 Energía</li>
+            </ul>
+
+            <div id="lessonContent" class="lesson-content"></div>
+        </section>
+
+        <!-- Sección GUARDAR -->
+        <section id="guardar" class="section">
+            <h2>Guardar conversación</h2>
+            <button onclick="saveChat()">💾 Guardar ahora</button>
+            <p>Se guardará en tu navegador.</p>
+        </section>
+
+        <!-- Sección CARGAR -->
+        <section id="cargar" class="section">
+            <h2>Cargar conversación</h2>
+            <button onclick="loadChat()">📂 Cargar conversación</button>
+        </section>
+
+    </div>
+
+    <script src="sheldoncito.js"></script>
+</body>
+</html>
