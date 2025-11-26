@@ -1,0 +1,111 @@
+/* ======= ESTILO TEMA LABORATORIO CIENTÍFICO ======= */
+
+body {
+    background: #0f1116;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+.app-container {
+    max-width: 600px;
+    margin: auto;
+    padding-bottom: 40px;
+}
+
+.app-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #1b1f27;
+    padding: 15px;
+    border-bottom: 2px solid #2a313f;
+}
+
+.logo {
+    width: 45px;
+    filter: brightness(10);
+}
+
+.title {
+    font-family: "Anton", sans-serif;
+    font-size: 32px;
+    color: white;
+    text-shadow: 0px 0px 8px #ffffffaa;
+}
+
+.menu-bar {
+    display: flex;
+    overflow-x: auto;
+    background: #16191f;
+    padding: 10px;
+    gap: 10px;
+}
+
+.menu-bar button {
+    flex: 1;
+    background: #242a35;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+}
+
+.section {
+    display: none;
+    padding: 15px;
+}
+
+.section.visible {
+    display: block;
+}
+
+.chat-window {
+    background: #0f1014;
+    border: 1px solid #242a35;
+    padding: 15px;
+    height: 430px;
+    overflow-y: auto;
+    border-radius: 8px;
+}
+
+.message {
+    max-width: 75%;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 8px;
+}
+
+.user-msg {
+    background: #2196f3;
+    margin-left: auto;
+}
+
+.bot-msg {
+    background: #1e1e1e;
+    border-left: 3px solid #ffffff;
+}
+
+.input-area {
+    display: flex;
+    padding: 10px;
+    gap: 8px;
+}
+
+input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    font-size: 16px;
+}
+
+button {
+    background: #4f5b6b;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+}
